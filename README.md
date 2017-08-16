@@ -1,5 +1,5 @@
 # Project of Alignment
---------
+
 ## Install
 
 * Enter into the alignment directory
