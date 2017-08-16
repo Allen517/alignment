@@ -28,10 +28,15 @@ INFO = 20
 DEBUG = 10
 NOTSET = 0
 
-CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
-ROOT_PATH = os.path.join(CURRENT_PATH, os.pardir)
-LOG_PATH = os.path.join(ROOT_PATH, 'log')
+# CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
+# ROOT_PATH = os.path.join(CURRENT_PATH, os.pardir)
+# LOG_PATH = os.path.join(ROOT_PATH, 'log')
 
+# CURRENT_PATH = os.getcwd()
+ROOT_PATH = os.getcwd()
+LOG_PATH = os.path.join(ROOT_PATH, 'log')
+if not os.path.exists(LOG_PATH):
+    os.mkdir(LOG_PATH)
 
 class LogHandler(logging.Logger):
     """

@@ -1,62 +1,50 @@
-from os.path import dirname, join
-from pkg_resources import parse_version
-from setuptools import setup, find_packages, __version__ as setuptools_version
+from os import path
+from setuptools import setup, find_packages
 
+here = path.abspath(path.dirname(__file__))
 
-with open(join(dirname(__file__), 'scrapy/VERSION'), 'rb') as f:
-    version = f.read().decode('ascii').strip()
-
-
-def has_environment_marker_platform_impl_support():
-    """Code extracted from 'pytest/setup.py'
-    https://github.com/pytest-dev/pytest/blob/7538680c/setup.py#L31
-    The first known release to support environment marker with range operators
-    it is 18.5, see:
-    https://setuptools.readthedocs.io/en/latest/history.html#id235
-    """
-    return parse_version(setuptools_version) >= parse_version('18.5')
-
-
-extras_require = {}
-
-if has_environment_marker_platform_impl_support():
-    extras_require[':platform_python_implementation == "PyPy"'] = [
-        'PyPyDispatcher>=2.1.0',
-    ]
+# Get the long description from the README file
+with open(path.join(here, 'README.md')) as f:
+    long_description = f.read()
 
 
 setup(
     name='Portrait',
-    version=version,
+    version='1.0.0.dev',
     url='https://github.com/Allen517/alignment',
     description='User portrait on Internet',
-    long_description=open('README.md').read(),
+    long_description=long_description,
+    keywords='internet portrait alignment',
     author='Portrait developers',
     maintainer='King Wang',
     maintainer_email='wangyongqing.casia@gmail.com',
     license='BSD',
     packages=find_packages(exclude=('tests', 'tests.*')),
-    include_package_data=True,
-    zip_safe=False,
+    package_data={
+        'portrait': ['config.ini'],
+    },
     entry_points={
-        'console_scripts': ['scrapy = scrapy.cmdline:execute']
+        'console_scripts': [
+            'data_import2neo = portrait.store.DataImport2Neo:main',
+        ],
     },
     classifiers=[
         'Framework :: Portrait',
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Console',
-        'Intended Audience :: Developers',
+        'Development Status :: 2 - Pre-Alpha',
+        'Environment :: Web Environment',
+        'Framework :: Flask'
+        'Intended Audience :: Science/Research',
         'License :: OSI Approved :: BSD License',
+        'Natural Language :: Chinese (Simplified)',
         'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Software Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     install_requires=[
-        'py2neo>=3.1.2'
+        'py2neo>=3.1.2',
+        'pymongo',
+        'uuid'
     ],
-    extras_require=extras_require,
 )
