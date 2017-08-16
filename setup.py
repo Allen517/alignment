@@ -25,7 +25,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'data_import2neo = portrait.store.DataImport2Neo:main',
+            'data_import2neo = portrait.import.DataImport2Neo:main',
         ],
     },
     classifiers=[

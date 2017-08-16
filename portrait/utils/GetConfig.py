@@ -15,6 +15,7 @@ class GetConfig(object):
 	def __init__(self):
 		self.pwd = os.path.split(os.path.realpath(__file__))[0] # current directory
 		self.config_path = os.path.join(os.path.split(self.pwd)[0], 'config.ini') # the upper level of current directory
+		print self.config_path
 		self.config_file = ConfigParse()
 		self.config_file.read(self.config_path)
 
