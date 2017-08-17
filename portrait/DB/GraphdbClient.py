@@ -115,11 +115,11 @@ class GraphdbClient(object):
 
 		self.log.info(u"Query: %s"%cql)
 
-		nds = self.graph.data(cql)
+		nds = self.graph.run(cql)
 
 		graph_nds = list()
 		for nd in nds:
-			graph_nds.append(Node(nd['res']))
+			graph_nds.append(nd['res'])
 
 		if graph_nds:
 			return graph_nds
@@ -153,7 +153,7 @@ class GraphdbClient(object):
 
 		graph_nds = list()
 		for nd in nds:
-			graph_nds.append(Node(nd['nd']))
+			graph_nds.append(nd['nd'])
 
 		if graph_nds:
 			return graph_nds
@@ -370,7 +370,8 @@ if __name__ == '__main__':
 	# print user_graph_node
 	# print db.find_rel_by_property({'label':'Douban', 'name':"='tada'"},\
 	# 		 {'label':'Weibo', 'nick_name':"='tadamiracle'"}, {})
-	print db.find_node_by_rel('Douban', {'name':"='tada11'"}, 'HAS', {})
+	print db.find_node_by_rel('Douban', {'id':"='{}'".format('3513921')}, 'HAS')
+	# print db.find_node_by_rel('Douban', {'name':"='tada11'"}, 'HAS', {})
 	# print db.find_rel_by_acc_property('id', {'label':'Douban', 'name':'tada'},\
 	# 		 {'label':'Weibo', 'nick_name':'tadamiracle'})
 	# print db.find_rel_by_fuzzy_property('id', {'label':'Douban', 'name':'ta'},\

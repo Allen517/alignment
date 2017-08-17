@@ -9,13 +9,13 @@ with open(path.join(here, 'README.md')) as f:
 
 
 setup(
-    name='Portrait',
+    name='portrait',
     version='1.0.0.dev',
     url='https://github.com/Allen517/alignment',
     description='User portrait on Internet',
     long_description=long_description,
     keywords='internet portrait alignment',
-    author='Portrait developers',
+    author='portrait developers',
     maintainer='King Wang',
     maintainer_email='wangyongqing.casia@gmail.com',
     license='BSD',
@@ -45,6 +45,7 @@ setup(
     install_requires=[
         'py2neo>=3.1.2',
         'pymongo',
-        'uuid'
+        'uuid',
+        'Flask',
     ],
 )

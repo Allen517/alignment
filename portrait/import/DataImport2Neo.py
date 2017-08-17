@@ -64,7 +64,9 @@ class DataImport2Neo(object):
 				# use existed user node or generate new user node in graphdb
 				if not user_graph_node:
 					user_graph_node = self.graphdb.find_node_by_rel('Douban', {'id':"='{}'".format(\
-																				douban_grpah_node['id'])}, 'HAS')
+																	douban_grpah_node['id'])}, 'HAS')
+					if user_graph_node:
+						user_graph_node = user_graph_node[0]
 				if not user_graph_node:
 					user_graph_node = self.graphdb.insert_or_update_node('User', uuid.uuid1().get_hex())
 				self.graphdb.insert_or_update_relation('HAS', user_graph_node, douban_grpah_node)
@@ -117,7 +119,7 @@ class DataImport2Neo(object):
 
 def main():
 	data2neo = DataImport2Neo()
-	data2neo.relation_data_proc(10)
+	data2neo.relation_data_proc(100)
 
 if __name__=='__main__':
 	data2neo = DataImport2Neo()
