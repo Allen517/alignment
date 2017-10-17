@@ -1,0 +1,18 @@
+2017-08-17 11:05:58,445 GraphdbClient.py[line:116] INFO Query: MATCH (nd:Douban)-[a:HAS]-(res) WHERE nd.id='3513921' RETURN res
+2017-08-18 08:24:08,801 GraphdbClient.py[line:261] INFO Query: MATCH (st_nd:Douban)-[a:ALIGN]-(end_nd:Weibo) WHERE st_nd.name='tada' AND end_nd.nick_name='tadamiracle' RETURN st_nd, a, end_nd
+2017-08-18 08:26:14,162 GraphdbClient.py[line:261] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) WHERE st_nd.name='tada' AND end_nd.nick_name='tadamiracle' RETURN st_nd, a, end_nd
+2017-08-18 08:26:48,854 GraphdbClient.py[line:261] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) WHERE st_nd.name='tada' AND end_nd.nick_name='tadamiracle' RETURN st_nd, rel, end_nd
+2017-08-18 08:28:32,581 GraphdbClient.py[line:261] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 10
+2017-08-18 10:09:05,497 GraphdbClient.py[line:272] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd
+2017-08-18 10:09:50,306 GraphdbClient.py[line:272] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel)
+2017-08-18 10:10:44,392 GraphdbClient.py[line:272] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(st_nd,rel,end_nd)
+2017-08-18 10:10:54,140 GraphdbClient.py[line:272] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(st_nd)
+2017-08-18 10:11:02,111 GraphdbClient.py[line:272] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel)
+2017-08-18 11:24:00,962 GraphdbClient.py[line:168] INFO Query: MATCH (nd:Douban) WHERE nd.name=~'.*ta.*' RETURN count(nd)
+2017-08-18 11:24:01,278 GraphdbClient.py[line:289] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel)
+2017-08-18 11:24:11,673 GraphdbClient.py[line:168] INFO Query: MATCH (nd:Douban) WHERE nd.name=~'.*ta.*' RETURN nd
+2017-08-18 11:24:12,058 GraphdbClient.py[line:289] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel)
+2017-08-18 11:37:30,767 GraphdbClient.py[line:168] INFO Query: MATCH (nd:Douban) WHERE nd.name=~'.*ta.*' RETURN count(nd)
+2017-08-18 11:37:30,865 GraphdbClient.py[line:289] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel)
+2017-08-18 11:38:11,315 GraphdbClient.py[line:168] INFO Query: MATCH (nd:Douban) WHERE nd.name=~'.*ta.*' RETURN count(nd) as num
+2017-08-18 11:38:11,443 GraphdbClient.py[line:289] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num

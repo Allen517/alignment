@@ -14,7 +14,7 @@ from portrait.utils.LogHandler import LogHandler
 from py2neo import Node
 import uuid
 
-class DataImport2Neo(object):
+class NameAlignImport2Neo(object):
 
 	def __init__(self):
 		self.config = GetConfig()
@@ -27,13 +27,7 @@ class DataImport2Neo(object):
 		self.weibodb = MongodbClient()
 		self.weibodb.setDatabase(self.config.weibodb_host, self.config.weibodb_port, \
 									self.config.weibodb_name, self.config.weibodb_tab)
-		self.reldb = MongodbClient()
-		self.reldb.setDatabase(self.config.reldb_host, self.config.reldb_port, \
-									self.config.reldb_name, self.config.reldb_tab)
-		self.logger = LogHandler('data_import2neo')
-
-	def __get_rel(self):
-		return self.reldb.getAll()
+		self.logger = LogHandler('name_align_import2neo')
 
 	def graphdb_transaction(func):
 		def wrapper(self, douban_uid_set, weibo_uid_set):
@@ -87,7 +81,45 @@ class DataImport2Neo(object):
 						user_graph_node = self.graphdb.insert_or_update_node('User', uuid.uuid1().get_hex())
 					self.graphdb.insert_or_update_relation('HAS', user_graph_node, weibo_graph_node)
 
-	def relation_data_proc(self, batch_proc_num):
+	def storeDoubanName(self, file_name, batch_proc_num):
+		with open(file_name, 'aw') as wrtF:
+			skip_num = 0
+			while(True):
+				query_res = self.doubandb.getAll(batch_proc_num, skip_num)
+				query_num = 0
+				vals = list()
+				for douban_res in query_res:
+					query_num += 1
+					if 'id' in douban_res:
+						graph_res = self.graphdb.find_node_by_id("Douban", "douban_{}".format())
+						if graph_res:
+							continue
+						if 'uid' in douban_res and 'name' in douban_res \
+							and 'desc' in douban_res and 'loc_name' in douban_res:
+							vals.append({'uid': douban_res['uid'], 'name':douban_res['name'], \
+								 			'desc':douban_res['desc'], 'loc_name':douban_res['loc_name']})
+				if not query_num:
+					break
+				for v in vals:
+					wrtF.write(json.dumps(v, ensure_ascii=False).decode('utf8')+'\t')
+					self.logger.info('已存储%d条豆瓣数据至本地'%skip_num+query_num)
+				skip_num += batch_proc_num
+
+	def relation_data_finder(self, batch_proc_num):
+		skip_num = 0
+		while(True):
+			# 1. get weibo data from mongo
+			weibo_query_res = self.weibodb.getAll(batch_proc_num, skip_num)
+			query_num = 0
+			for weibo_res in weibo_query_res:
+				query_num += 1
+				weibo_res_name = weibo_res['nick_name']
+
+			if not query_num: # no results
+				break
+
+			skip_num += batch_proc_num
+
 		# 1. get relationships
 		rels = self.__get_rel()
 		# 2.1 initialization
@@ -95,6 +127,7 @@ class DataImport2Neo(object):
 		douban_uid_set = tuple()
 		weibo_uid_set = list()
 		# 2.2 start to process relationships
+		rels = self.__get_rel()
 		for rel in rels:
 			proc_num += 1
 			# 2.3 if processing the max of batch size, find user infos from mongodb
@@ -118,5 +151,5 @@ class DataImport2Neo(object):
 		self.logger.info(u'Done! Already processing %d alignment records'%proc_num)
 
 if __name__=='__main__':
-	data2neo = DataImport2Neo()
-	data2neo.relation_data_proc(100)
+	data2neo = NameAlignImport2Neo()
+	data2neo.storeDoubanName('douban_tmp', 10)

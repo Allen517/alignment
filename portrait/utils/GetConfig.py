@@ -89,3 +89,17 @@ class GetConfig(object):
 	def reldb_tab(self):
 		return self.config_file.get('RelationDB', 'tab')
 	# end of relationdb configuration	
+
+	# namehash configuration
+	@LazyProperty
+	def namehashdb_host(self):
+		return self.config_file.get('NameHashDB','host')
+
+	@LazyProperty
+	def namehashdb_port(self):
+		return int(self.config_file.get('NameHashDB', 'port'))
+
+	@LazyProperty
+	def namehashdb_name(self):
+		return self.config_file.get('NameHashDB', 'name')
+	# end of relationdb configuration	

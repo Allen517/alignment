@@ -39,7 +39,7 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.7',
         'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Software Development :: Libraries :: Application Frameworks',
+        'Topic :: Softwamax_shinglere Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     install_requires=[
@@ -47,5 +47,11 @@ setup(
         'pymongo',
         'uuid',
         'Flask',
+        'python-Levenshtein',
+        'xpinyin',
+        'apscheduler',
+        'futures',
+        'pybloom',
+        'numpy',
     ],
 )

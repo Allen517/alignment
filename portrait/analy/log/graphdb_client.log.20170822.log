@@ -1,0 +1,285 @@
+2017-08-22 15:32:30,212 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 15:32:30,619 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 15:32:51,409 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 15:32:51,470 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 15:32:53,770 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 15:32:56,262 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 15:32:58,711 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 3000 LIMIT 1000
+2017-08-22 15:33:01,082 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 4000 LIMIT 1000
+2017-08-22 15:33:03,473 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 5000 LIMIT 1000
+2017-08-22 15:33:05,757 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 6000 LIMIT 1000
+2017-08-22 15:33:08,059 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 7000 LIMIT 1000
+2017-08-22 15:33:10,649 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 8000 LIMIT 1000
+2017-08-22 15:33:12,926 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 9000 LIMIT 1000
+2017-08-22 15:33:15,287 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 10000 LIMIT 1000
+2017-08-22 15:33:17,454 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 11000 LIMIT 1000
+2017-08-22 15:33:19,914 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 12000 LIMIT 1000
+2017-08-22 15:33:22,349 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 13000 LIMIT 1000
+2017-08-22 15:33:24,684 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 14000 LIMIT 1000
+2017-08-22 15:33:26,981 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 15000 LIMIT 1000
+2017-08-22 15:33:29,131 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 16000 LIMIT 1000
+2017-08-22 15:33:31,502 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 17000 LIMIT 1000
+2017-08-22 15:33:33,744 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 18000 LIMIT 1000
+2017-08-22 15:33:36,201 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 19000 LIMIT 1000
+2017-08-22 15:33:38,403 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 20000 LIMIT 1000
+2017-08-22 15:33:40,756 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 21000 LIMIT 1000
+2017-08-22 15:33:42,961 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 22000 LIMIT 1000
+2017-08-22 15:33:45,242 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 23000 LIMIT 1000
+2017-08-22 15:33:47,762 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 24000 LIMIT 1000
+2017-08-22 15:33:50,203 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 25000 LIMIT 1000
+2017-08-22 15:33:52,493 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 26000 LIMIT 1000
+2017-08-22 15:33:54,671 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 27000 LIMIT 1000
+2017-08-22 15:33:56,905 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 28000 LIMIT 1000
+2017-08-22 15:33:59,133 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 29000 LIMIT 1000
+2017-08-22 15:34:01,569 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 30000 LIMIT 1000
+2017-08-22 15:34:03,784 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 31000 LIMIT 1000
+2017-08-22 15:34:06,040 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 32000 LIMIT 1000
+2017-08-22 15:34:08,423 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 33000 LIMIT 1000
+2017-08-22 15:34:10,805 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 34000 LIMIT 1000
+2017-08-22 15:34:13,188 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 35000 LIMIT 1000
+2017-08-22 15:34:15,421 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 36000 LIMIT 1000
+2017-08-22 17:51:04,601 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 17:51:04,659 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 17:51:06,903 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 17:51:09,069 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 17:51:11,316 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 3000 LIMIT 1000
+2017-08-22 17:51:13,462 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 4000 LIMIT 1000
+2017-08-22 17:51:15,818 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 5000 LIMIT 1000
+2017-08-22 17:51:18,105 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 6000 LIMIT 1000
+2017-08-22 17:51:20,407 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 7000 LIMIT 1000
+2017-08-22 17:51:22,848 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 8000 LIMIT 1000
+2017-08-22 17:51:25,101 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 9000 LIMIT 1000
+2017-08-22 17:51:27,329 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 10000 LIMIT 1000
+2017-08-22 17:51:29,575 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 11000 LIMIT 1000
+2017-08-22 17:51:31,847 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 12000 LIMIT 1000
+2017-08-22 17:51:34,157 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 13000 LIMIT 1000
+2017-08-22 17:51:36,338 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 14000 LIMIT 1000
+2017-08-22 17:51:38,606 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 15000 LIMIT 1000
+2017-08-22 17:51:40,778 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 16000 LIMIT 1000
+2017-08-22 17:51:42,964 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 17000 LIMIT 1000
+2017-08-22 17:51:45,183 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 18000 LIMIT 1000
+2017-08-22 17:51:47,466 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 19000 LIMIT 1000
+2017-08-22 17:51:49,613 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 20000 LIMIT 1000
+2017-08-22 17:51:51,805 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 21000 LIMIT 1000
+2017-08-22 17:51:54,099 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 22000 LIMIT 1000
+2017-08-22 17:51:56,395 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 23000 LIMIT 1000
+2017-08-22 17:51:58,796 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 24000 LIMIT 1000
+2017-08-22 17:52:01,019 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 25000 LIMIT 1000
+2017-08-22 17:52:03,394 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 26000 LIMIT 1000
+2017-08-22 17:52:05,674 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 27000 LIMIT 1000
+2017-08-22 17:52:07,936 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 28000 LIMIT 1000
+2017-08-22 17:52:10,198 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 29000 LIMIT 1000
+2017-08-22 17:52:12,383 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 30000 LIMIT 1000
+2017-08-22 17:52:14,684 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 31000 LIMIT 1000
+2017-08-22 17:52:17,064 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 32000 LIMIT 1000
+2017-08-22 17:52:19,358 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 33000 LIMIT 1000
+2017-08-22 17:52:21,714 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 34000 LIMIT 1000
+2017-08-22 17:52:23,964 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 35000 LIMIT 1000
+2017-08-22 17:52:26,104 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 36000 LIMIT 1000
+2017-08-22 17:53:48,574 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 17:53:48,631 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 17:53:50,849 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 17:53:53,038 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 17:54:44,464 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 17:54:44,521 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 17:55:01,051 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 17:55:01,107 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 17:55:03,308 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 17:55:40,228 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 17:55:40,284 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 17:56:25,127 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 17:56:25,184 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 21:53:15,102 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 21:53:15,155 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 21:53:58,015 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 21:53:58,071 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:37:14,128 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:37:14,180 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:37:55,140 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:37:55,218 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:37:59,749 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:37:59,804 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:01,972 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:03,560 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:05,218 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:06,810 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:08,487 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:30,143 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:38:30,198 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:38:59,154 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:38:59,208 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:01,400 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:03,013 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:04,675 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:06,260 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:07,942 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:09,549 GraphdbClient.py[line:299] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:39:31,824 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:39:31,880 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:40:01,023 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:40:01,079 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:40:03,297 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:40:04,906 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:40:38,497 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:40:38,553 GraphdbClient.py[line:298] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:40:46,029 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:40:46,083 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:40:48,309 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:40:50,470 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 22:41:01,273 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num LIMIT 1000
+2017-08-22 22:41:01,326 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:41:30,263 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:41:30,318 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:41:32,494 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:42:50,849 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:42:50,903 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:42:53,073 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:43:03,978 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:43:04,032 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:43:06,208 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:43:21,192 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:43:21,250 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:43:23,462 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:51:12,484 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:51:12,544 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:51:14,728 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:51:28,491 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:51:28,547 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:51:30,795 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:52:30,614 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:52:30,668 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:52:32,866 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:52:41,574 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:52:41,628 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:52:43,867 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:53:06,731 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:53:06,786 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:53:09,007 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:53:42,704 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:53:42,759 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:53:44,990 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:54:26,206 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:54:26,261 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:54:28,499 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:55:20,494 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:55:20,551 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:55:22,742 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:55:34,833 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:55:34,884 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:55:37,103 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:56:04,312 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 22:56:04,369 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 22:56:06,555 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 22:56:08,722 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 22:56:10,925 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 3000 LIMIT 1000
+2017-08-22 22:56:12,992 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 4000 LIMIT 1000
+2017-08-22 22:56:15,360 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 5000 LIMIT 1000
+2017-08-22 22:56:17,674 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 6000 LIMIT 1000
+2017-08-22 22:56:20,012 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 7000 LIMIT 1000
+2017-08-22 22:56:22,454 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 8000 LIMIT 1000
+2017-08-22 22:56:24,640 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 9000 LIMIT 1000
+2017-08-22 22:56:26,864 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 10000 LIMIT 1000
+2017-08-22 22:56:29,088 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 11000 LIMIT 1000
+2017-08-22 22:56:31,367 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 12000 LIMIT 1000
+2017-08-22 22:56:33,654 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 13000 LIMIT 1000
+2017-08-22 22:56:36,266 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 14000 LIMIT 1000
+2017-08-22 22:56:39,173 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 15000 LIMIT 1000
+2017-08-22 22:56:41,472 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 16000 LIMIT 1000
+2017-08-22 22:56:43,754 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 17000 LIMIT 1000
+2017-08-22 22:56:46,052 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 18000 LIMIT 1000
+2017-08-22 22:56:48,404 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 19000 LIMIT 1000
+2017-08-22 22:56:50,712 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 20000 LIMIT 1000
+2017-08-22 22:56:52,957 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 21000 LIMIT 1000
+2017-08-22 22:56:55,258 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 22000 LIMIT 1000
+2017-08-22 22:56:57,521 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 23000 LIMIT 1000
+2017-08-22 22:56:59,920 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 24000 LIMIT 1000
+2017-08-22 22:57:02,123 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 25000 LIMIT 1000
+2017-08-22 22:57:04,502 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 26000 LIMIT 1000
+2017-08-22 22:57:06,943 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 27000 LIMIT 1000
+2017-08-22 22:57:09,279 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 28000 LIMIT 1000
+2017-08-22 22:57:11,644 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 29000 LIMIT 1000
+2017-08-22 22:57:14,038 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 30000 LIMIT 1000
+2017-08-22 22:57:16,575 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 31000 LIMIT 1000
+2017-08-22 22:57:18,953 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 32000 LIMIT 1000
+2017-08-22 22:57:21,494 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 33000 LIMIT 1000
+2017-08-22 22:57:24,084 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 34000 LIMIT 1000
+2017-08-22 22:57:26,704 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 35000 LIMIT 1000
+2017-08-22 22:57:29,218 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 36000 LIMIT 1000
+2017-08-22 23:06:45,518 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 23:06:45,574 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 23:06:57,980 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 23:06:58,036 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 23:07:00,532 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 23:07:02,866 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 23:07:05,412 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 3000 LIMIT 1000
+2017-08-22 23:07:07,847 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 4000 LIMIT 1000
+2017-08-22 23:07:10,505 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 5000 LIMIT 1000
+2017-08-22 23:07:13,078 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 6000 LIMIT 1000
+2017-08-22 23:07:15,666 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 7000 LIMIT 1000
+2017-08-22 23:07:18,528 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 8000 LIMIT 1000
+2017-08-22 23:07:20,909 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 9000 LIMIT 1000
+2017-08-22 23:07:23,219 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 10000 LIMIT 1000
+2017-08-22 23:07:25,533 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 11000 LIMIT 1000
+2017-08-22 23:07:27,913 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 12000 LIMIT 1000
+2017-08-22 23:07:30,285 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 13000 LIMIT 1000
+2017-08-22 23:07:32,521 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 14000 LIMIT 1000
+2017-08-22 23:07:34,867 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 15000 LIMIT 1000
+2017-08-22 23:07:37,155 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 16000 LIMIT 1000
+2017-08-22 23:07:39,513 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 17000 LIMIT 1000
+2017-08-22 23:07:42,023 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 18000 LIMIT 1000
+2017-08-22 23:07:44,446 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 19000 LIMIT 1000
+2017-08-22 23:07:46,684 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 20000 LIMIT 1000
+2017-08-22 23:07:48,995 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 21000 LIMIT 1000
+2017-08-22 23:07:51,381 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 22000 LIMIT 1000
+2017-08-22 23:07:53,743 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 23000 LIMIT 1000
+2017-08-22 23:07:56,184 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 24000 LIMIT 1000
+2017-08-22 23:07:58,428 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 25000 LIMIT 1000
+2017-08-22 23:08:00,830 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 26000 LIMIT 1000
+2017-08-22 23:08:03,384 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 27000 LIMIT 1000
+2017-08-22 23:08:05,931 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 28000 LIMIT 1000
+2017-08-22 23:08:08,340 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 29000 LIMIT 1000
+2017-08-22 23:08:10,590 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 30000 LIMIT 1000
+2017-08-22 23:08:12,918 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 31000 LIMIT 1000
+2017-08-22 23:08:15,231 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 32000 LIMIT 1000
+2017-08-22 23:08:17,493 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 33000 LIMIT 1000
+2017-08-22 23:08:19,892 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 34000 LIMIT 1000
+2017-08-22 23:08:22,259 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 35000 LIMIT 1000
+2017-08-22 23:08:24,491 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 36000 LIMIT 1000
+2017-08-22 23:09:19,371 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN count(rel) as num
+2017-08-22 23:09:19,436 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd LIMIT 1000
+2017-08-22 23:09:21,752 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 1000 LIMIT 1000
+2017-08-22 23:09:24,098 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 2000 LIMIT 1000
+2017-08-22 23:09:26,466 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 3000 LIMIT 1000
+2017-08-22 23:09:28,683 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 4000 LIMIT 1000
+2017-08-22 23:09:31,144 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 5000 LIMIT 1000
+2017-08-22 23:09:33,519 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 6000 LIMIT 1000
+2017-08-22 23:09:35,900 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 7000 LIMIT 1000
+2017-08-22 23:09:38,409 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 8000 LIMIT 1000
+2017-08-22 23:09:40,830 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 9000 LIMIT 1000
+2017-08-22 23:09:43,158 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 10000 LIMIT 1000
+2017-08-22 23:09:45,502 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 11000 LIMIT 1000
+2017-08-22 23:09:47,855 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 12000 LIMIT 1000
+2017-08-22 23:09:50,285 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 13000 LIMIT 1000
+2017-08-22 23:09:52,583 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 14000 LIMIT 1000
+2017-08-22 23:09:54,940 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 15000 LIMIT 1000
+2017-08-22 23:09:57,213 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 16000 LIMIT 1000
+2017-08-22 23:09:59,536 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 17000 LIMIT 1000
+2017-08-22 23:10:01,850 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 18000 LIMIT 1000
+2017-08-22 23:10:04,235 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 19000 LIMIT 1000
+2017-08-22 23:10:06,474 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 20000 LIMIT 1000
+2017-08-22 23:10:08,747 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 21000 LIMIT 1000
+2017-08-22 23:10:11,115 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 22000 LIMIT 1000
+2017-08-22 23:10:13,610 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 23000 LIMIT 1000
+2017-08-22 23:10:16,172 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 24000 LIMIT 1000
+2017-08-22 23:10:18,514 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 25000 LIMIT 1000
+2017-08-22 23:10:20,922 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 26000 LIMIT 1000
+2017-08-22 23:10:23,268 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 27000 LIMIT 1000
+2017-08-22 23:10:25,658 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 28000 LIMIT 1000
+2017-08-22 23:10:28,064 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 29000 LIMIT 1000
+2017-08-22 23:10:30,317 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 30000 LIMIT 1000
+2017-08-22 23:10:32,677 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 31000 LIMIT 1000
+2017-08-22 23:10:35,047 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 32000 LIMIT 1000
+2017-08-22 23:10:37,313 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 33000 LIMIT 1000
+2017-08-22 23:10:39,617 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 34000 LIMIT 1000
+2017-08-22 23:10:41,930 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 35000 LIMIT 1000
+2017-08-22 23:10:44,154 GraphdbClient.py[line:296] INFO Query: MATCH (st_nd:Douban)-[rel:ALIGN]-(end_nd:Weibo) RETURN st_nd, rel, end_nd SKIP 36000 LIMIT 1000
