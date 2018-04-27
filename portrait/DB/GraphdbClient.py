@@ -12,17 +12,40 @@ from portrait.utils.GetConfig import GetConfig
 from portrait.utils.utilFunction import deprecated, condition_clause_format, \
 		fuzzy_condition_clause_format, acc_condition_clause_format
 from portrait.utils.LogHandler import LogHandler
+from portrait.utils.utilClass import LazyProperty
 
 class GraphdbClient(object):
 
-	def setDatabase(self, db_host, db_port, db_user, db_password):
+	@LazyProperty
+	def __db_host__(self):
+		return self.db_host
+
+	@LazyProperty
+	def __db_port__(self):
+		return self.db_port
+
+	@LazyProperty
+	def __db_user__(self):
+		return self.db_user
+
+	@LazyProperty
+	def __db_password__(self):
+		return self.db_password
+
+	def get_db(self):
+		return self.graph
+
+	def __init__(self, db_host='localhost', db_port=27017, db_user='', db_password=''):
+		self._setDatabase(db_host, db_port, db_user, db_password)
+
+	def _setDatabase(self, db_host, db_port, db_user, db_password):
 		self.db_host = db_host
 		self.db_port = db_port
 		self.db_user = db_user
 		self.db_password = db_password
 		self.graph = Graph(host=self.db_host, bolt=True, http=self.db_port, \
 						user=self.db_user, password=self.db_password)
-		self.log = LogHandler("graphdb_client")
+		self.log = LogHandler("graphdb_client", level=20)
 
 	def insert_or_update_node(self, label, key, vals={}):
 		"""
@@ -111,7 +134,7 @@ class GraphdbClient(object):
 		if is_count:
 			ret_clause = " RETURN count(nd) as num"
 		else:
-			ret_clause = " RETURN nd"
+			ret_clause = " RETURN res"
 
 		if condition_clause:
 			cql += " WHERE "+condition_clause+ret_clause
@@ -123,7 +146,7 @@ class GraphdbClient(object):
 		if limit and isinstance(limit, int):
 			cql += " LIMIT {}".format(limit)
 
-		self.log.info(u"Query: %s"%cql)
+		self.log.debug(u"Query: %s"%cql)
 
 		nds = self.graph.run(cql)
 
@@ -139,7 +162,7 @@ class GraphdbClient(object):
 		else:
 			return None
 
-	def find_node_by_property(self, label, nd_info, is_count=False, limit=None, skip=None):
+	def find_node_by_property(self, label, nd_info=dict(), is_count=False, limit=None, skip=None):
 		"""
 		Find node by conditions. 
 
@@ -170,7 +193,7 @@ class GraphdbClient(object):
 		if limit and isinstance(limit, int):
 			cql += " LIMIT {}".format(limit)
 
-		self.log.info(u"Query: %s"%cql)
+		self.log.debug(u"Query: %s"%cql)
 
 		nds = self.graph.data(cql)
 
@@ -249,22 +272,23 @@ class GraphdbClient(object):
 	# 	else:
 	# 		return None
 
-	def find_rel_by_property(self, st_nd, end_nd, rel_info, is_count=False, limit=None, skip=None):
+	def find_rel_by_property(self, st_nd, end_nd, rel_type='ALIGN', rel_info=dict(), is_count=False, limit=None, skip=None):
 		"""
 		Find relationship by conditions.
 
 		Parameters:
 		st_nd: start node info in dictionary where key is the property_name and value is the property_val.
 		end_nd: end node info in dictionary where key is the property_name and value is the property_val.
-		rel_info: the filter of aligned info
+		rel_type: the type of relationship
+		rel_info: the filter of relationship info
 		is_count: if False, return relationships; else return count(rel)
 		limit: default None. limited number of query results
 		skip: for return results by segment
 
-		Example: find_rel_by_property('id', {'label':'Douban', 'name':"=~'.*ta.*'"}, {'label':'Weibo'}, 2)
+		Example: find_rel_by_property({'label':'Douban', 'name':"=~'.*ta.*'"}, {'label':'Weibo'})
 		"""
 		if 'label' in st_nd and 'label' in end_nd:
-			cql = "MATCH (st_nd:{})-[rel:ALIGN]-(end_nd:{})".format(st_nd['label'], end_nd['label'])
+			cql = "MATCH (st_nd:{})-[rel:{}]-(end_nd:{})".format(st_nd['label'], rel_type, end_nd['label'])
 		else:
 			self.log.warning(u"No specific relation type in 'find_rel_by_property'")
 			return None
@@ -293,12 +317,16 @@ class GraphdbClient(object):
 		if limit and isinstance(limit, int):
 			cql += " LIMIT {}".format(limit)
 
-		self.log.info(u"Query: %s"%cql)
+		self.log.debug(u"Query: %s"%cql)
 
 		rels = self.graph.data(cql)
 
-		if rels:
-			return rels
+		graph_rels = list()
+		for rel in rels:
+			graph_rels.append(rel['rel'])
+
+		if graph_rels:
+			return graph_rels
 		else:
 			return None
 
@@ -386,6 +414,12 @@ class GraphdbClient(object):
 	# 		return rels
 	# 	else:
 	# 		return None
+
+	def delete(self, subgraph):
+		if isinstance(subgraph, Relationship):
+			self.graph.separate(subgraph)
+		else:
+			self.graph.delete(subgraph)
 
 	def clear(self):
 		self.graph.delete_all()

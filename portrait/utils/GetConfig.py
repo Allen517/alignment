@@ -103,3 +103,17 @@ class GetConfig(object):
 	def namehashdb_name(self):
 		return self.config_file.get('NameHashDB', 'name')
 	# end of relationdb configuration	
+
+	# nethash configuration
+	@LazyProperty
+	def nethashdb_host(self):
+		return self.config_file.get('NetHashDB','host')
+
+	@LazyProperty
+	def nethashdb_port(self):
+		return int(self.config_file.get('NetHashDB', 'port'))
+
+	@LazyProperty
+	def nethashdb_name(self):
+		return self.config_file.get('NetHashDB', 'name')
+	# end of relationdb configuration	

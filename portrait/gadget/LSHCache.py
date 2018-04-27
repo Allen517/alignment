@@ -1,17 +1,26 @@
+# -*- coding:utf8 -*-
+
 from collections import defaultdict
 import numpy as np
 import random
-import sys
 import time
+import json
 import logging
 from xpinyin import Pinyin
+from threading import Lock
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 from portrait.DB.MongodbClient import MongodbClient
 from portrait.utils.LogHandler import LogHandler
+from LSHCacheGlobal import * #for recoding global shingles
+
+mutex = Lock()
 
 class LSHCache:
 
-    def __init__(self, db, n=100, b=20, r=5, shingle_size=3):
+    def __init__(self, db, n=100, b=20, r=5, shingle_size=3, shingle_dict=dict()):
         # assign it
         self._n = n
         self._b = b
@@ -24,8 +33,7 @@ class LSHCache:
         assert self._shingle_size > 0, '_shingle_size must be greater than 0.  Current _shingle_size=%d' % (self._shingle_size)
 
         # make it
-        self._shingles = {} # maps from words or sequences of words to integers
-        self._counter = 0 # the global counter for word indicies in _shingles
+        self._shingles_setter(shingle_dict)
         self._memomask = [] # stores the random 32 bit sequences for each hash function
         self._most_recent_insert = 0
         self._num_docs = 0
@@ -40,14 +48,30 @@ class LSHCache:
         if not isinstance(db, MongodbClient):
             self.logger.error(u'Set MongodbClient Object Ahead!')
 
+    def _shingles_setter(self, shingle_dict):
+        global shingles, shingle_counter
+        if not shingle_dict and not shingles:
+            shingles = dict()
+            shingle_counter = 0
+            # self._shingles = {} # maps from words or sequences of words to integers--在不同的任务中，需要共享该_shingles
+            # self._counter = 0 # the global counter for word indicies in _shingles
+        if shingle_dict:
+            shingles = shingle_dict
+            shingle_counter = len(shingle_dict)
+            # self._shingles = shingle_dict
+            # self._counter = len(shingle_dict)
+        shingle_counter = len(shingles)
+
     def _init_hash_masks(self,num_hash):
         """
         This initializes the instance variable _memomask which is a list of the 
         random 32 bits associated with each hash function
         """
+        m = 2**32
+        a = 1103515245
+        c = 12345
         for i in range(num_hash):
-            random.seed(i)
-            self._memomask.append(int(random.getrandbits(32)))
+            self._memomask.append(int((a*i+c)%m))
 
     def _reset_cache(self, band):
         self._seen = set()  # the set of doc ids which have already been hashed
@@ -66,6 +90,7 @@ class LSHCache:
         These unique ids, are then added to the shingle_vec object which is just a sparse
         vector implemented as a dict with v[id]=1 when a shingle id is present
         """
+        global shingles,shingle_counter
         logging.debug('entering with len(doc)=%d', len(doc))
         v = {}
         # print doc
@@ -77,20 +102,32 @@ class LSHCache:
             #             self._shingles[s] = self._counter
             #             self._counter += 1
             #         v[self._shingles[s]] = 1
-            for i in range(max(1,len(doc)-self._shingle_size)):
+            for i in range(max(1,len(doc)-self._shingle_size+1)):
                 s = doc[i:min(len(doc),i+self._shingle_size)]
-                if not self._shingles.has_key(s):
-                    self._shingles[s] = self._counter
-                    self._counter += 1
-                v[self._shingles[s]] = 1
+                if mutex.acquire():
+                    if not shingles.has_key(s):
+                        shingles[s] = shingle_counter #记录当前新的pattern(给当前的pattern一个_counter编号-顺序)
+                        shingle_counter += 1
+                mutex.release()
+                v[shingles[s]] = 1
+                # if not self._shingles.has_key(s):
+                #     self._shingles[s] = self._counter #记录当前新的pattern(给当前的pattern一个_counter编号-顺序)
+                #     self._counter += 1
+                # v[self._shingles[s]] = 1
         if isinstance(doc, list):
             for n in range(1,self._shingle_size):
-                for i in range(len(doc) - n):
+                for i in range(len(doc)-n+1):
                     s = doc[i:i+n]
-                    if not self._shingles.has_key(tuple(s)):
-                        self._shingles[tuple(s)] = self._counter
-                        self._counter += 1
-                    v[self._shingles[tuple(s)]] = 1
+                    if mutex.acquire():
+                        if not shingles.has_key(s):
+                            shingles[s] = shingle_counter #记录当前新的pattern(给当前的pattern一个_counter编号-顺序)
+                            shingle_counter += 1
+                    mutex.release()
+                    v[shingles[s]] = 1
+                        # if not self._shingles.has_key(tuple(s)):
+                    #     self._shingles[tuple(s)] = self._counter
+                    #     self._counter += 1
+                    # v[self._shingles[tuple(s)]] = 1
         return v
 
     def _get_sig(self,shingle_vec,num_perms):
@@ -128,14 +165,15 @@ class LSHCache:
         """
         logging.debug('got tokenized doc: len(doc)=%d', len(doc))
         shingle_vec = self._get_shingle_vec(doc)
-        # print "shingle_vec:",
-        # print shingle_vec
-        # print "keys of shingle_vec:",
-        # print sorted(self._shingles.keys())
+        # if doc=='xinz' or doc=='anna': 
+        #     print "shingle_vec:",
+        #     print shingle_vec
+        #     # print "keys of shingle_vec:",
+        #     # print sorted(self._shingles.keys())
         logging.debug('got shingle_vec: len(shingle_vec)=%d', len(shingle_vec))
         sig = self._get_sig(shingle_vec,self._n) # n-dimensional min-hash signiture
-        # print "sig:",
-        # print sig
+        # if doc=='xinz' or doc=='anna':
+        # print "doc:{} \n sig:{}".format(doc,sig)
         logging.debug('got minhash sig: len(sig)=%d', len(sig))
         lsh = self._get_lsh(sig,self._b,self._r) # r-dimensional list of bucket ids
         # print "lsh",
@@ -166,6 +204,9 @@ class LSHCache:
     def _insert(self, doc, id, date_added=int(time.time()), passive=True):
         lsh = self._get_lsh_from_doc(doc)
         logging.debug('id: %d lsh: %s', id, lsh)
+        # if id=='xinz' or id=='2546096':
+        #     print self._memomask
+        #     print doc, lsh
         # print doc, lsh
         if self._insert_lsh(lsh, id, date_added):
             return True
@@ -185,26 +226,35 @@ class LSHCache:
             if not self._insert(doc, doc_id):
                 logging.info(u'The hashing %s is failed', doc_tuple)
 
-    def store_in_mongo(self, db_coll_name, doc_tuples, id_tag, content_tag):
-        self.insert_batch(doc_tuples, id_tag, content_tag)
-        base_coll_name = db_coll_name
-        for i in range(self._b):
-            cur_coll_name = '{}_{}'.format(base_coll_name,i)
-            self.db.changeTable(cur_coll_name)
-            records = list()
-            for k,v in self._cache[i].iteritems():
-                for doc_id in v:
-                    records.append({'hash':k,'doc_id':doc_id})
-            # print "====="
-            # print doc_tuples
-            # print i, self._cache[i]
-            # print records
-            if records:
-                self.db.put_many(records)
-        self._reset_cache(self._b)
+    def store_in_mongo(self, db_coll_name='', doc_tuples=tuple(), id_tag=''
+                            , content_tag='', shingle_dict=dict(), canrcd=False):
+        if not canrcd:
+            self._shingles_setter(shingle_dict)
+            self.insert_batch(doc_tuples, id_tag, content_tag)
+            for i in range(self._b):
+                cur_coll_name = '{}_{}'.format(db_coll_name,i)
+                self.db.changeTable(cur_coll_name)
+                records = list()
+                for k,v in self._cache[i].iteritems():
+                    for doc_id in v:
+                        records.append({'hash':k,'doc_id':doc_id})
+                # print "====="
+                # print doc_tuples
+                # print i, self._cache[i]
+                # print records
+                if records:
+                    self.db.put_many(records)
+            self._reset_cache(self._b)
+        else:
+            self._write_global_shingles('shingle.rcd')
+
+    def _write_global_shingles(self, target_file):
+        global shingles
+        with open(target_file, 'w') as file_handler:
+            file_handler.write(json.dumps(shingles, ensure_ascii=False))
 
     def cache(self):
-        return self._cacheupdate
+        return self._cache
 
     def num_docs(self):
         return self._num_docs

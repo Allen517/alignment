@@ -43,7 +43,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     install_requires=[
-        'py2neo>=3.1.2',
+        'py2neo==3.1.2',
         'pymongo',
         'uuid',
         'Flask',
