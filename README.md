@@ -20,13 +20,13 @@
 
 > 豆瓣全量用户： 10.61.2.218:27017 douban.users
 
-> 豆瓣全量关系： 10.61.2.218:27017 douban.rels
+> 豆瓣全量关系： 10.61.2.218:27017 douban.rels（用户的关注列表）
 
 * 微博数据
 
 > 微博全量用户： 10.61.2.218:27017 weibo.user_all
 
-> 微博关联关系： 10.61.2.218:27017 weibo.user_links
+> 微博关联关系： 10.61.2.218:27017 weibo.user_links （start_uid是end_uid的粉丝，即start_uid关注end_uid）
 
 > 微博2016年6月的全量消息数据： 10.60.1.73:27107 weibo.content
 
